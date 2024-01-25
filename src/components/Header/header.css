@@ -1,0 +1,83 @@
+/* header.css */
+
+/* Common styles for all screen sizes */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+.header-right {
+  display: flex;
+  gap: 20px;
+}
+
+.header-right a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  position: relative;
+}
+
+.sub-content {
+  position: relative;
+}
+
+.sub-content .sub-content-details {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  background-color: #444;
+  padding: 10px;
+  border-radius: 4px;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.sub-content:hover .sub-content-details {
+  display: block;
+}
+
+.sub-content h3 {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.sub-content p {
+  margin: 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-right {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-right a {
+    margin-bottom: 10px;
+  }
+
+  .sub-content .sub-content-details {
+    width: 100%;
+    left: 0;
+  }
+}
